@@ -48,9 +48,6 @@ const LoginPage = ({ navigation }) => {
         }
     }
 
-    const handleOnChange = (text) => {
-        set_text(text);
-    }
 
     const NoACtionPage = () => {
         return (
@@ -59,7 +56,7 @@ const LoginPage = ({ navigation }) => {
                     <Text style={{ fontSize: 20, textAlign: 'center' }}>Vewillez indiquer</Text>
                     <Text style={{ marginBottom: 40, fontSize: 20, textAlign: 'center' }}>votre n" de matricule</Text>
 
-                    <TextInput onChangeText={(text) => { handleOnChange(text) }} value={_text} style={{ height: 40, width: 300, borderColor: 'gray', borderWidth: 1 }} />
+                    <TextInput onChangeText={(text) => { (text)=>set_text(text); }} value={_text} style={{ height: 40, width: 300, borderColor: 'gray', borderWidth: 1 }} />
 
                     <View style={{ paddingLeft: 50, paddingRight: 50, marginTop: 20 }}>
                         <Button title="Enter" color="#e10f21" onPress={() => handleLogin()} />
