@@ -1,11 +1,10 @@
-import React from 'react'
 import { View, Text, Button, Image, TextInput } from 'react-native'
-import { useState } from 'react'
-
+import React, { useState } from 'react'
 
 const LoginPage = ({ navigation }) => {
 
     const [_statusPage, set_statusPage] = useState(0);
+    
     const [_text, set_text] = useState("");
 
     const SuccessPage = () => {
@@ -56,7 +55,7 @@ const LoginPage = ({ navigation }) => {
                     <Text style={{ fontSize: 20, textAlign: 'center' }}>Vewillez indiquer</Text>
                     <Text style={{ marginBottom: 40, fontSize: 20, textAlign: 'center' }}>votre n" de matricule</Text>
 
-                    <TextInput onChangeText= { (text)=>set_text(text)} value={_text} style={{ height: 40, width: 300, borderColor: 'gray', borderWidth: 1 }} />
+                    <TextInput onChangeText= { (text)=>set_text(text)} defaultValue={_text} style={{ height: 40, width: 300, borderColor: 'gray', borderWidth: 1 }} />
 
                     <View style={{ paddingLeft: 50, paddingRight: 50, marginTop: 20 }}>
                         <Button title="Enter" color="#e10f21" onPress={() => handleLogin()} />
@@ -84,6 +83,7 @@ const LoginPage = ({ navigation }) => {
                     <Image style={{ width: 50, height: 50, margin: 10 }} source={require("../public/img/img-7.png")}></Image>
                 </View>
                 {ShowSection()}
+                {/* <NoACtionPage /> */}
             </View>
         </>
     )
