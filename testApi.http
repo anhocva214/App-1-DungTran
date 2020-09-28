@@ -1,0 +1,12 @@
+POST /snippets/ HTTP/1.1
+Host: 35.187.250.39:8000
+Connection: keep-alive
+Content-Length: 83
+User-Agent: admin
+Content-Type: application/json
+Accept: */*
+Origin: http://35.187.250.39:8000
+Referer: http://35.187.250.39:8000/docs/
+Accept-Encoding: gzip, deflate
+Accept-Language: vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7,fr-FR;q=0.6,fr;q=0.5
+Cookie: PHPSESSID=rbk9va88pbic81pqijpeensdi7; csrftoken=BTVis7S99BQOLUjjzdletS1hDIXd6fgXV8KC1vkNXviIlplZ0w7RaIPHUOVE9CK8
