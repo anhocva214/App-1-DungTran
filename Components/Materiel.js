@@ -51,6 +51,11 @@ const Materiel = ({ navigation }) => {
         }
     })
 
+    const clickElementTable = (index)=>{
+        if (index==0)
+        navigation.navigate('DetailTable');
+    }
+
     const displayTable = () => {
 
 
@@ -67,11 +72,11 @@ const Materiel = ({ navigation }) => {
                                             var result = _activeArr.filter(item => item == index);
                                             if (result.length > 0){
                                                 return(
-                                                    <Col key={index} data={value}  heightArr={[28,28]} style={{...styles.title, backgroundColor: "#e10f21"}} textStyle={{ color: "#fff", textAlign: 'center' }} />
+                                                    <Col key={index} data={value} onPress={()=>clickElementTable(index)}  heightArr={[28,28]} style={{...styles.title, backgroundColor: "#e10f21"}} textStyle={{ color: "#fff", textAlign: 'center' }} />
                                                 )
                                             }
                                             return (
-                                                <Col key={index} data={value}  heightArr={[28,28]} style={styles.title} textStyle={{ color: "#fff", textAlign: 'center' }} />
+                                                <Col key={index} data={value} onPress={()=>clickElementTable(index)}  heightArr={[28,28]} style={styles.title} textStyle={{ color: "#fff", textAlign: 'center' }} />
                                             )
                                         })
                                     }

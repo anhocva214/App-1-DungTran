@@ -31,6 +31,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LoginPage from './Components/LoginPage'
 import MenuPage from './Components/MenuPage'
 import Materiel from './Components/Materiel'
+import DetailTable from './Components/DetailTable'
 
 const Stack = createStackNavigator();
 
@@ -40,13 +41,10 @@ const App = () => {
     <>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen
-            name="LoginPage"
-            component={LoginPage}
-            options={{ title: 'Login' }}
-          />
+          <Stack.Screen name="LoginPage" component={LoginPage} options={{ title: 'Login' }}/>
           <Stack.Screen name="MenuPage" options={{ title: '', headerLeft: null, gesturesEnabled: false }} component={MenuPage} />
           <Stack.Screen name="Matériel" options={{ title: '' , headerLeft: null}} component={Materiel} />
+          <Stack.Screen name="DetailTable" options={{ title: '' , headerLeft: null}} component={DetailTable} />
 
         </Stack.Navigator>
       </NavigationContainer>
